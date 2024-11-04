@@ -1,14 +1,14 @@
 # Orion Library
-This documentation is for the stable release of Orion Library.
+Esta documentação é para a versão estável da Orion Library.
 
-## Booting the Library
+## Inicializando a biblioteca
 ```lua
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 ```
 
 
 
-## Creating a Window
+## Criando uma janela
 ```lua
 local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
@@ -27,7 +27,7 @@ CloseCallback = <function> - Function to execute when the window is closed.
 
 
 
-## Creating a Tab
+## Criando uma guia
 ```lua
 local Tab = Window:MakeTab({
 	Name = "Tab 1",
@@ -41,7 +41,7 @@ Icon = <string> - The icon of the tab.
 PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
 ```
-## Creating a Section
+## Criando uma seção
 ```lua
 local Section = Tab:AddSection({
 	Name = "Section"
@@ -51,9 +51,9 @@ local Section = Tab:AddSection({
 Name = <string> - The name of the section.
 ]]
 ```
-You can add elements to sections the same way you would add them to a tab normally.
+Você pode adicionar elementos às seções da mesma forma que normalmente os adicionaria a uma guia.
 
-## Notifying the user
+## Notificando o usuário
 ```lua
 OrionLib:MakeNotification({
 	Name = "Title!",
@@ -72,7 +72,7 @@ Time = <number> - The duration of the notfication.
 
 
 
-## Creating a Button
+## Criando um botão
 ```lua
 Tab:AddButton({
 	Name = "Button!",
@@ -88,7 +88,7 @@ Callback = <function> - The function of the button.
 ```
 
 
-## Creating a Checkbox toggle
+## Criando uma alternância de caixa de seleção
 ```lua
 Tab:AddToggle({
 	Name = "This is a toggle!",
@@ -105,14 +105,14 @@ Callback = <function> - The function of the toggle.
 ]]
 ```
 
-### Changing the value of an existing Toggle
+### Alterando o valor de um Toggle existente
 ```lua
 CoolToggle:Set(true)
 ```
 
 
 
-## Creating a Color Picker
+## Criando um seletor de cores
 ```lua
 Tab:AddColorpicker({
 	Name = "Colorpicker",
@@ -129,13 +129,13 @@ Callback = <function> - The function of the colorpicker.
 ]]
 ```
 
-### Setting the color picker's value
+### Configurando o valor do seletor de cores
 ```lua
 ColorPicker:Set(Color3.fromRGB(255,255,255))
 ```
 
 
-## Creating a Slider
+## Criando um controle deslizante
 ```lua
 Tab:AddSlider({
 	Name = "Slider",
@@ -161,36 +161,36 @@ Callback = <function> - The function of the slider.
 ]]
 ```
 
-### Change Slider Value
+### Alterar valor do controle deslizante
 ```lua
 Slider:Set(2)
 ```
-Make sure you make your slider a variable (local CoolSlider = Tab:AddSlider...) for this to work.
+Certifique-se de tornar seu controle deslizante uma variável (local CoolSlider = Tab:AddSlider...) para que isso funcione.
 
 
-## Creating a Label
+## Criando um rótulo
 ```lua
 Tab:AddLabel("Label")
 ```
 
-### Changing the value of an existing label
+### Alterando o valor de um rótulo existente
 ```lua
 CoolLabel:Set("Label New!")
 ```
 
 
-## Creating a Paragraph
+## Criando um parágrafo
 ```lua
 Tab:AddParagraph("Paragraph","Paragraph Content")
 ```
 
-### Changing an existing paragraph
+### Alterando um parágrafo existente
 ```lua
 CoolParagraph:Set("Paragraph New!", "New Paragraph Content!")
 ```
 
 
-## Creating an Adaptive Input
+## Criando uma entrada adaptativa
 ```lua
 Tab:AddTextbox({
 	Name = "Textbox",
@@ -210,7 +210,7 @@ Callback = <function> - The function of the textbox.
 ```
 
 
-## Creating a Keybind
+## Criando um atalho de teclado
 ```lua
 Tab:AddBind({
 	Name = "Bind",
@@ -229,13 +229,13 @@ Callback = <function> - The function of the bind.
 ]]
 ```
 
-### Chaning the value of a bind
+### Alterando o valor de um vínculo
 ```lua
 Bind:Set(Enum.KeyCode.E)
 ```
 
 
-## Creating a Dropdown menu
+## Criando um menu suspenso
 ```lua
 Tab:AddDropdown({
 	Name = "Dropdown",
@@ -254,26 +254,26 @@ Callback = <function> - The function of the dropdown.
 ]]
 ```
 
-### Adding a set of new Dropdown buttons to an existing menu
+### Adicionando um conjunto de novos botões suspensos a um menu existente
 ```lua
 Dropdown:Refresh(List<table>,true)
 ```
 
-The above boolean value "true" is whether or not the current buttons will be deleted.
-### Selecting a dropdown option
+O valor boolean "true" acima indica se os botões atuais serão excluídos ou não.
+### Selecionando uma opção suspensa
 ```lua
 Dropdown:Set("dropdown option")
 ```
 
-# Finishing your script (REQUIRED)
-The below function needs to be added at the end of your code.
+# Concluindo seu script (OBRIGATÓRIO)
+A função abaixo precisa ser adicionada no final do seu código.
 ```lua
 OrionLib:Init()
 ```
 
-### How flags work.
-The flags feature in the ui may be confusing for some people. It serves the purpose of being the ID of an element in the config file, and makes accessing the value of an element anywhere in the code possible.
-Below in an example of using flags.
+### Como funcionam os sinalizadores.
+O recurso de sinalizadores na interface do usuário pode ser confuso para algumas pessoas. Ele tem o propósito de ser o ID de um elemento no arquivo de configuração e possibilita o acesso ao valor de um elemento em qualquer lugar do código.
+Abaixo está um exemplo de uso de sinalizadores.
 ```lua
 Tab1:AddToggle({
     Name = "Toggle",
@@ -284,16 +284,16 @@ Tab1:AddToggle({
 
 print(OrionLib.Flags["toggle"].Value) -- prints the value of the toggle.
 ```
-Flags only work with the toggle, slider, dropdown, bind, and colorpicker.
+Os sinalizadores funcionam apenas com alternância, controle deslizante, menu suspenso, vinculação e seletor de cores.
 
-### Making your interface work with configs.
-In order to make your interface use the configs function you first need to add the `SaveConfig` and `ConfigFolder` arguments to your window function. The explanation of these arguments in above.
-Then you need to add the `Flag` and `Save` values to every toggle, slider, dropdown, bind, and colorpicker you want to include in the config file.
-The `Flag = <string>` argument is the ID of an element in the config file.
-The `Save = <bool>` argument includes the element in the config file.
-Config files are made for every game the library is launched in.
+### Fazendo sua interface funcionar com configurações.
+Para fazer sua interface usar a função configs você primeiro precisa adicionar os argumentos `SaveConfig` e `ConfigFolder` à sua função de janela. A explicação desses argumentos acima.
+Então você precisa adicionar os valores `Flag` e `Save` a cada alternância, controle deslizante, menu suspenso, ligação e seletor de cores que deseja incluir no arquivo de configuração.
+O argumento `Flag = <string>` é o ID de um elemento no arquivo de configuração.
+O argumento `Save = <bool>` inclui o elemento no arquivo de configuração.
+Os arquivos de configuração são criados para cada jogo em que a biblioteca é iniciada.
 
-## Destroying the Interface
+## Destruindo a Interface
 ```lua
 OrionLib:Destroy()
 ```
