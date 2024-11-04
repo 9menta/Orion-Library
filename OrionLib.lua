@@ -505,27 +505,25 @@ function OrionLib:MakeWindow(WindowConfig)
 	local CloseBtn = SetChildren(SetProps(MakeElement("Button"), {
 		Size = UDim2.new(0.5, 0, 1, 0),
 		Position = UDim2.new(0.5, 0, 0, 0),
-		BackgroundTransparency = 1,
-		ImageColor3 = Color3.fromRGB(255, 0, 0)
+		BackgroundTransparency = 1
 	}), {
-		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://97035610866409"), {
+		SetProps(MakeElement("Image", "rbxassetid://97035610866409"), {
 			ImageColor3 = Color3.fromRGB(255, 0, 0),
 			Position = UDim2.new(0, 9, 0, 6),
 			Size = UDim2.new(0, 18, 0, 18)
-		}), "Text")
+		})
 	})
 
 	local MinimizeBtn = SetChildren(SetProps(MakeElement("Button"), {
 		Size = UDim2.new(0.5, 0, 1, 0),
-		BackgroundTransparency = 1,
-		ImageColor3 = Color3.fromRGB(255, 255, 0)
+		BackgroundTransparency = 1
 	}), {
-		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://97035610866409"), {
+		SetProps(MakeElement("Image", "rbxassetid://97035610866409"), {
 			Position = UDim2.new(0, 9, 0, 6),
 			Size = UDim2.new(0, 18, 0, 18),
 			ImageColor3 = Color3.fromRGB(255, 255, 0),
 			Name = "Ico"
-		}), "Text")
+		})
 	})
 
 	local DragPoint = SetProps(MakeElement("TFrame"), {
