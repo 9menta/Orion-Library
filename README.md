@@ -12,7 +12,7 @@
 <----------------------- Aproveite bastante! ----------------------->
 ```
 
-# <> Versão em EN-US:
+# <> Version in EN-US:
 
 ```
 -> This Orion library was obtained from the original developer and modified. It’s available for you, beginners in script creation, and it’s fully functional. :)
