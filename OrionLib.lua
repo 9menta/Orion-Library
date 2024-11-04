@@ -505,8 +505,8 @@ function OrionLib:MakeWindow(WindowConfig)
 	local CloseBtn = SetChildren(SetProps(MakeElement("Button"), {
 		Size = UDim2.new(0.5, 0, 1, 0),
 		Position = UDim2.new(0.5, 0, 0, 0),
-		BackgroundTransparency = 0,
-		BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		BackgroundTransparency = 1,
+		ImageColor3 = Color3.fromRGB(255, 0, 0)
 	}), {
 		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://97035610866409"), {
 			ImageColor3 = Color3.fromRGB(255, 0, 0),
@@ -517,8 +517,8 @@ function OrionLib:MakeWindow(WindowConfig)
 
 	local MinimizeBtn = SetChildren(SetProps(MakeElement("Button"), {
 		Size = UDim2.new(0.5, 0, 1, 0),
-		BackgroundTransparency = 0,
-		BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+		BackgroundTransparency = 1,
+		ImageColor3 = Color3.fromRGB(255, 255, 0)
 	}), {
 		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://97035610866409"), {
 			Position = UDim2.new(0, 9, 0, 6),
@@ -695,7 +695,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			Parent = Orion,
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.new(0.5, 0, 0.4, 0),
-			Size = UDim2.new(0, 35, 0, 35),
+			Size = UDim2.new(0, 28, 0, 28),
 			ImageColor3 = Color3.fromRGB(170, 23, 255),
 			ImageTransparency = 1
 		})
