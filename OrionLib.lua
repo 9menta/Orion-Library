@@ -603,7 +603,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			AddThemeObject(SetProps(MakeElement("Label", "Premium", 12), {
 				Size = UDim2.new(1, -60, 0, 12),
 				Position = UDim2.new(0, 50, 1, -25),
-                                Font = Enum.Font.GothamBold
+                                Font = Enum.Font.GothamBold,
 				Visible = not WindowConfig.HidePremium
 			}), "TextDark")
 		}),
