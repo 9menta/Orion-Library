@@ -600,10 +600,9 @@ function OrionLib:MakeWindow(WindowConfig)
 				Font = Enum.Font.GothamBold,
 				ClipsDescendants = true
 			}), "Text"),
-			AddThemeObject(SetProps(MakeElement("Label", "Premium", 12), {
+			AddThemeObject(SetProps(MakeElement("Label", "Premium User", 12), {
 				Size = UDim2.new(1, -60, 0, 12),
 				Position = UDim2.new(0, 50, 1, -25),
-                                Font = Enum.Font.GothamBold,
 				Visible = not WindowConfig.HidePremium
 			}), "TextDark")
 		}),
