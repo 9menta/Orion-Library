@@ -13,7 +13,7 @@ local OrionLib = {
 	Connections = {},
 	Flags = {},
 	Themes = {
-		Moon = {
+		Default = {
                        Main = Color3.fromRGB(25, 25, 25),
                        Second = Color3.fromRGB(32, 32, 32),
                        Stroke = Color3.fromRGB(60, 60, 60),
@@ -23,7 +23,7 @@ local OrionLib = {
                 },
 
 
-		Default = {
+		Moon = {
 			Main = Color3.fromRGB(25, 25, 25),
 			Second = Color3.fromRGB(32, 32, 32),
 			Stroke = Color3.fromRGB(60, 60, 60),
