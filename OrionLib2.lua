@@ -272,7 +272,7 @@ local function LoadCfg(Config)
 				end    
 			end)
 		else
-			warn("Orion Library Config Loader - Could not find ", a ,b)
+			warn("Elixir Library Config Loader - Could not find ", a ,b)
 		end
 	end)
 end
@@ -522,14 +522,14 @@ function OrionLib:MakeWindow(WindowConfig)
 	local UIHidden = false
 
 	WindowConfig = WindowConfig or {}
-	WindowConfig.Name = WindowConfig.Name or "Thor Hub /\ Nice Scripts!"
+	WindowConfig.Name = WindowConfig.Name or "Elixir Library"
 	WindowConfig.ConfigFolder = WindowConfig.ConfigFolder or WindowConfig.Name
 	WindowConfig.SaveConfig = WindowConfig.SaveConfig or false
 	WindowConfig.HidePremium = WindowConfig.HidePremium or false
 	if WindowConfig.IntroEnabled == nil then
 		WindowConfig.IntroEnabled = true
 	end
-	WindowConfig.IntroText = WindowConfig.IntroText or "Thor Hub /\ Nice Scripts!"
+	WindowConfig.IntroText = WindowConfig.IntroText or "Elixir Library"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
 	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://72671288986713"
