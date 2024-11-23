@@ -744,15 +744,14 @@ function OrionLib:MakeWindow(WindowConfig)
 
 	MakeDraggable(DragPoint, MainWindow)
 	
-	-- @ UI Visible & Mobile Icon Handle (Zv-yz/github);
 	local _currentKey = Enum.KeyCode.RightShift;
 	local isMobile = table.find({ Enum.Platform.IOS, Enum.Platform.Android }, UserInputService:GetPlatform());
-	local MobileIcon = SetChildren(SetProps(MakeElement("ImageButton", "http://www.roblox.com/asset/?id=17570737246"), {
+	local MobileIcon = SetChildren(SetProps(MakeElement("ImageButton", "http://www.roblox.com/asset/?id=72671288986713"), {
 		Position = UDim2.new(0.25, 0, 0.1, 0);
 		Size = UDim2.new(0, 32, 0, 33);
 		-- Position = UDim2.new(0.52, 0, 0, 0);
 		-- Size = UDim2.new(0.045, 0, 0.089, 0);
-		-- Draggable = true;
+		Draggable = true;
 		Parent = Orion;
 		Visible = false;
 	}), { MakeElement("Corner", 1, 0) });
