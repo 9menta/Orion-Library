@@ -24,7 +24,7 @@ local OrionLib = {
     },
 
     -- Tema Roxo Neon
-    Default = {
+    Ocean = {
         Main = Color3.fromRGB(28, 14, 45),
         Second = Color3.fromRGB(40, 19, 63),
         Stroke = Color3.fromRGB(147, 51, 234),
@@ -34,7 +34,7 @@ local OrionLib = {
     },
 
     -- Tema Ocean
-    Ocean = {
+    Default = {
         Main = Color3.fromRGB(15, 23, 42),
         Second = Color3.fromRGB(30, 41, 59),
         Stroke = Color3.fromRGB(56, 189, 248),
