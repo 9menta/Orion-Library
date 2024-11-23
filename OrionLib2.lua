@@ -63,7 +63,7 @@ local OrionLib = {
         TextDark = Color3.fromRGB(110, 231, 183)
     }
 },
-	SelectedTheme = "Mint",
+	SelectedTheme = "Ocean",
 	Folder = nil,
 	SaveCfg = false
 }
