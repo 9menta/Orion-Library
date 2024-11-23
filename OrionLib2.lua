@@ -34,7 +34,7 @@ local OrionLib = {
     },
 
     -- Tema Ocean
-    Default = {
+    Sunset = {
         Main = Color3.fromRGB(15, 23, 42),
         Second = Color3.fromRGB(30, 41, 59),
         Stroke = Color3.fromRGB(56, 189, 248),
@@ -44,7 +44,7 @@ local OrionLib = {
     },
 
     -- Tema Sunset
-    Sunset = {
+    Default = {
         Main = Color3.fromRGB(39, 15, 15),
         Second = Color3.fromRGB(51, 21, 21),
         Stroke = Color3.fromRGB(251, 146, 60),
